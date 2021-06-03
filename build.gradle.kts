@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21")
         classpath("com.android.tools.build:gradle:7.0.0-beta03")
+        classpath ("com.apollographql.apollo:apollo-gradle-plugin:2.5.3")
         classpath(SQLDelight.sqldelight)
     }
 }

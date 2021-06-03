@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    id("com.apollographql.apollo").version("2.4.6")
+    id("com.apollographql.apollo")
     id("com.squareup.sqldelight")
 }
 
@@ -90,6 +90,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+}
+
+tasks.register("downloadSchema", com.apollographql.apollo.gradle.internal.ApolloDownloadSchemaTask::class.java) {
+
+    this.endpoint.set("https://desserts-ktor-server.herokuapp.com/graphql")
+    this.schemaRelativeToProject.set("src/commonMain/graphql/com.example.justdesserts/schema.json")
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
