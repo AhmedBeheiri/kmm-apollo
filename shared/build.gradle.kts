@@ -47,7 +47,7 @@ kotlin {
                     isForce = true
                 }
 
-                api("com.apollographql.apollo:apollo-runtime-kotlin:2.4.6")
+                api("com.apollographql.apollo:apollo-runtime-kotlin:2.5.3")
                 implementation("com.squareup.sqldelight:runtime:${Versions.sqlDelight}")
             }
         }
