@@ -1,9 +1,6 @@
 package com.example.justdesserts.shared
 
-import android.util.Log
 import com.apollographql.apollo.ApolloClient
-import com.apollographql.apollo.Logger
-import com.apollographql.apollo.api.internal.ApolloLogger
 import com.apollographql.apollo.interceptor.BearerTokenInterceptor
 import com.apollographql.apollo.interceptor.TokenProvider
 import com.apollographql.apollo.network.http.ApolloHttpNetworkTransport
